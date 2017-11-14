@@ -182,6 +182,7 @@ pythontex-files-*/
 
 # todonotes
 *.tdo
+PaperClimDin.pdf
 
 # easy-todo
 *.lod
