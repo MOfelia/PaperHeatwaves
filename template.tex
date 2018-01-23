@@ -77,17 +77,15 @@ grestore
 
 %\authorrunning{Short form of author list} % if too long for running head
 
-\institute{Faculty of Environmental Sciences and Biochemistry. University od Castilla-La Mancha \at
-              Avenida Carlos III s/n, 45071-Toledo \\
-              
-             
+\institute{Faculty of Environmental Sciences and Biochemistry. University of Castilla-La Mancha 
+\at Avenida Carlos III s/n, 45071-Toledo  \\
               \email{MOfelia.Molina1@alu.uclm.es}           %  \\
 %             \emph{Present address:} of F. Author  %  if needed
            \and
            S. Author \at
               second address
-}
-
+} 
+ 
 \date{Received: date / Accepted: date}
 % The correct dates will be entered by the editor
 
@@ -111,14 +109,14 @@ Present climate modelling of heat waves at the regional scale of Europe was desc
 
 A heat wave is defined as a period of consecutive days with hot temperatures. There is a type of heat wave, more extreme still, called "mega heat waves". The two hottest events have occured in the last decade \cite{bar_al2011} with importants effects on society. 
 
-Synoptic sistems that produce heat waves are high prresures and dry soil moisture. From a metheorogical point of view, a heat wave event is produce when a stationary high pressure sistem remains in the same location for a longer period than expected. The high pressure system cause and prolong a heat wave event by advecting warm dry air to the region afected. On the other hand, extreme temperatures are more likely when soil moisture decreases. Dry moistures wuth persistent high pressures conditions amplifies the positive feedback \cite{Perkins_2015}. A clear spatial correlation between antecedent soil moisture conditions and heat wave temperatures was shown by \cite{Sil_al2017} for the European heat waves of 2003 and 2010. 
+Synoptic sistems that produce heat waves are high prresures and dry soil moisture. From a metheorogical point of view, a heat wave event is produce when a stationary high pressure sistem remains in the same location for a longer period than expected. The high pressure system cause and prolong a heat wave event by advecting warm dry air to the region afected. On the other hand, extreme temperatures are more likely when soil moisture decreases. Dry moistures wuth persistent high pressures conditions amplifies the positive feedback \cite{per2015}. A clear spatial correlation between antecedent soil moisture conditions and heat wave temperatures was shown by \cite{Sil_al2017} for the European heat waves of 2003 and 2010. 
  
 
 The Expert Team on Climate Change Detection and Indices (ETCCDI) has defined several indices to measure extreme temperatures. They are derived from daily maximum and minimum temperature and daily precipitation.    
 
 \section{Data: Simulations and models}
 
-Temperture extremes require high-quality daily data for their calculation \cite{per_2015}. The data have been provided by EURO-CORDEX, the European branch of the CORDEX initiative. The EURO-CORDEX simulations are based on multiple dynamical and empirical-statistical downscaling models forced by multiple global climate models from the Coupled Model Intercomparison Project Phase 5 (CMIP5). Daily maximum temperatures of historical simulations are used for period () and are compared with simulations for future periord (). Future climate simulations are based on greenhouse gas emission scenarios (Representative Concentration Pathways, RCPs) corresponding to stabilization of radiative forcing after the 21st century at 4,5 W/m² (RCP4.5) and a rising radiative forcing crossing 8,5 W/m² at the end of 21st century (RCP8.5) \cite{Mos_al2010}. 
+Temperature extremes require high-quality daily data for their calculation \cite{per2015}. The data have been provided by EURO-CORDEX, the European branch of the CORDEX initiative. The EURO-CORDEX simulations are based on multiple dynamical and empirical-statistical downscaling models forced by multiple global climate models from the Coupled Model Intercomparison Project Phase 5 (CMIP5). Daily maximum temperatures of historical simulations are used for period () and are compared with simulations for future periord (). Future climate simulations are based on greenhouse gas emission scenarios (Representative Concentration Pathways, RCPs) corresponding to stabilization of radiative forcing after the 21st century at 4,5 W/m² (RCP4.5) and a rising radiative forcing crossing 8,5 W/m² at the end of 21st century (RCP8.5) \cite{Mos_al2010}. 
 A comparison of several simulations couples are analyzed in detail to improve our understanding of the uncertainities related to heat wave description: two RCMs forced with the same GCM, two different emissions scenarios for the same RCM, and the effect of resolution 0.44 vs 0.11. 
 
 
@@ -126,13 +124,13 @@ A comparison of several simulations couples are analyzed in detail to improve ou
 
 In this study we use two indices to asses projected changes in the intensity and duration of the heat waves over Europe. Almost every climatological study about heat waves  uses a different metric, so we have selectionate one index to asses the frecuency and another one to study the intensity of the heat waves  in the future. The election of the correct index depends on the objetive of the study. Extreme temperature indices are based in thresholds of temperature that can vary if you are studying its effects of temperature on health or in agriculture.  In climate, this threshold can not be a fixed temperature because the daily temperature variability is different among regions.  So that, the ETCCDI replaced the HWDI index (Frich et al., 2002) by the Spell Warm Duration Index (SWDI), which is calculated using a percentile-based threshold.     
 
-The Heat Wave Magnitude Index is defined as the maximum magnitude of the heat waves in a year, where heat wave is the period ≥ 3 consecutive days with maximum temperature above the daily threshold for the reference period 1981–2010. The threshold is defined as the 90th percentile of daily maxima, centered on a 31 day window \cite{Rus_al2014}.
+The Heat Wave Magnitude Index is defined as the maximum magnitude of the heat waves in a year, where heat wave is the period ≥ 3 consecutive days with maximum temperature above the daily threshold for the reference period 1981–2010. The threshold is defined as the 90th percentile of daily maxima, centered on a 31 day window \cite{rus_al2014}.
 
 The Warm Spell Duration Index (WSDI) is defined as follows: Let TX ij be the daily maximum temperature on day i in period j and let TX in 90 be the calendar day 90 th percentile centered on a 5 day window for the base period 1961–1990. Then the number of days per period is summed where, in intervals of at least 6 consecutive days: TX ij > TX in 90.
 
 The calculations are performed with the R package climdex.pcic as documented at The Comprehensive R Archive Network website (http://cran.r-project.org/web/packages/climdex.pcic/index.html).  
 
-Kike (pruebas): The main index we will use is HWDI \citep{rus_al2004}
+Kike (pruebas): The main index we will use is HWDI \citep{rus_al2014}
 
 
 As shown in section \ref{intro}
