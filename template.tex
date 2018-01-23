@@ -111,7 +111,10 @@ Present climate modelling of heat waves at the regional scale of Europe was desc
 
 A heat wave is defined as a period of consecutive days with hot temperatures. There is a type of heat wave, more extreme still, called "mega heat waves". The two hottest events have occured in the last decade \cite{bar_al2011} with importants effects on society. 
 
-The Expert Team on Climate Change Detection and Indices (ETCCDI) has defined several indices to measure extreme temperatures. They are derived from daily maximum and minimum temperature and daily precipitation.   
+Synoptic sistems that produce heat waves are high prresures and dry soil moisture. From a metheorogical point of view, a heat wave event is produce when a stationary high pressure sistem remains in the same location for a longer period than expected. The high pressure system cause and prolong a heat wave event by advecting warm dry air to the region afected. On the other hand, extreme temperatures are more likely when soil moisture decreases. Dry moistures wuth persistent high pressures conditions amplifies the positive feedback \cite{Perkins_2015}. A clear spatial correlation between antecedent soil moisture conditions and heat wave temperatures was shown by \cite{Sil_al2017} for the European heat waves of 2003 and 2010. 
+ 
+
+The Expert Team on Climate Change Detection and Indices (ETCCDI) has defined several indices to measure extreme temperatures. They are derived from daily maximum and minimum temperature and daily precipitation.    
 
 \section{Data: Simulations and models}
 
@@ -121,7 +124,11 @@ A comparison of several simulations couples are analyzed in detail to improve ou
 
 \section{Methods}
 
-In this study we use two indices to asses projected changes in the intensity and duration of the heat waves over Europe. Almost every climatological study about heat waves  uses a different metric, so we have selectionate one index to asses the frecuency and another one to study the intensity of the heat waves  in the future.   
+In this study we use two indices to asses projected changes in the intensity and duration of the heat waves over Europe. Almost every climatological study about heat waves  uses a different metric, so we have selectionate one index to asses the frecuency and another one to study the intensity of the heat waves  in the future. The election of the correct index depends on the objetive of the study. Extreme temperature indices are based in thresholds of temperature that can vary if you are studying its effects of temperature on health or in agriculture.  In climate, this threshold can not be a fixed temperature because the daily temperature variability is different among regions.  So that, the ETCCDI replaced the HWDI index (Frich et al., 2002) by the Spell Warm Duration Index (SWDI), which is calculated using a percentile-based threshold.     
+
+The Heat Wave Magnitude Index is defined as the maximum magnitude of the heat waves in a year, where heat wave is the period ≥ 3 consecutive days with maximum temperature above the daily threshold for the reference period 1981–2010. The threshold is defined as the 90th percentile of daily maxima, centered on a 31 day window \cite{Rus_al2014}.
+
+The Warm Spell Duration Index (WSDI) is defined as follows: Let TX ij be the daily maximum temperature on day i in period j and let TX in 90 be the calendar day 90 th percentile centered on a 5 day window for the base period 1961–1990. Then the number of days per period is summed where, in intervals of at least 6 consecutive days: TX ij > TX in 90.
 
 The calculations are performed with the R package climdex.pcic as documented at The Comprehensive R Archive Network website (http://cran.r-project.org/web/packages/climdex.pcic/index.html).  
 
