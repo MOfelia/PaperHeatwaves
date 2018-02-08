@@ -101,13 +101,16 @@ extent(mync2) <- extent(splonlat)
 
 ## represento:
 
+pdf("bc.pdf")
 plot(mync2)
 maps(add=TRUE)
+dev.off()
 
 ## con levelplot (y proyeccion latlon)
 
+pdf("bclevel.pdf")
 levelplot(mync2) ## añadir el mapa requiere más pasos.
-
+dev.off()
 
 ########################################################
 
