@@ -39,11 +39,11 @@ setwd("/home/UCLM/e.sanchez/pruebasR/")
 ncdout<-"hwmiavgp2.nc"
 londim <- ncdim_def("lon","degrees_east",as.double(xlon))
 latdim <- ncdim_def("lat","degrees_north",as.double(xlat))
-vname<-"hwdii"
+vname<-"hwmii"
 fillValue <- 1e32
-hwmidef<-ncvar_def("hwdii","",list(londim,latdim),fillValue,vname,prec="single")
-hwmiddef<-ncvar_def("hwdid","days",list(londim,latdim),fillValue,vname,prec="single")
-hwmisdef<-ncvar_def("hwdis","day",list(londim,latdim),fillValue,vname,prec="single")
+hwmidef<-ncvar_def("hwmii","",list(londim,latdim),fillValue,vname,prec="single")
+hwmiddef<-ncvar_def("hwmid","days",list(londim,latdim),fillValue,vname,prec="single")
+hwmisdef<-ncvar_def("hwmis","day",list(londim,latdim),fillValue,vname,prec="single")
 ncsfin<-nc_create(ncdout,list(hwmidef,hwmiddef,hwmisdef),force_v4=T)
 ncvar_put(ncsfin,hwmidef,hwmimatrixi)
 ncvar_put(ncsfin,hwmiddef,hwmimatrixd)
