@@ -1,0 +1,11 @@
+
+
+ncks -C -O -x -v lon $1 w1.nc
+ncks -C -O -x -v lat w1.nc w2.nc
+cdo merge w2.nc sftlfrca44ref.nc temp1.nc
+ncatted -a coordinates,hwmid,a,c,'lon lat' temp1.nc
+ncatted -a coordinates,hwmidl,a,c,'lon lat' temp1.nc
+ncatted -a coordinates,hwmids,a,c,'lon lat' temp1.nc
+cdo remapbil,gridEUR44i temp1.nc $2
+rm w1.nc w2.nc temp1.nc
+

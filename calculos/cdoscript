@@ -1,0 +1,38 @@
+#! /bin/bash
+
+###Script para crear días y cambiar de calendario 360 a 365 días###
+
+#1. Extraer los días 30 de cada mes
+
+cdo selday,30 $1 30days.nc
+
+#2. Extraer los días 01 de cada mes
+
+cdo selday,1 $1 01days.nc
+
+#3. Hacer la media de los dos días
+
+cdo add 30days.nc 01days.nc add.nc
+
+cdo divc,2 add.nc mean.nc
+
+#4. Seleccionar los meses que nos interesan para añadir después
+
+cdo selmon,01,03,05,10,11 mean.nc newdays.nc
+
+#5. Cambiar el tipo de calendario, de 360 días a standard, para poder cambiar la fecha a 31.
+
+cdo setcalendar,365days newdays.nc newdaysstandard.nc
+
+cdo shifttime,+1days newdaysstandard.nc 31days.nc
+
+#6. Cambiar el tipo de calendario de mi archivo de temperaturas inicial
+
+cdo setcalendar,365days $1 tasmaxstandard.nc
+
+#7. Añadir los días creados al fichero de temperaturas
+
+cdo mergetime tasmaxstandard.nc 31days.nc $2 
+
+##Lo lanzamos con bash cdoscript
+
